@@ -1,0 +1,524 @@
+/* ==========================================
+   CSS RESET
+========================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================================
+   ROOT VARIABLES
+========================================== */
+
+:root{
+
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+
+    --background:#f8fafc;
+    --surface:#ffffff;
+
+    --text:#1f2937;
+    --text-light:#6b7280;
+
+    --border:#d1d5db;
+
+    --radius:12px;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+    --max-width:1100px;
+
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   SKIP LINK
+========================================== */
+
+.skip-link{
+
+    position:absolute;
+
+    top:-60px;
+
+    left:20px;
+
+    background:#000;
+
+    color:#fff;
+
+    padding:12px 20px;
+
+    text-decoration:none;
+
+    z-index:999;
+
+    border-radius:6px;
+
+}
+
+.skip-link:focus{
+
+    top:20px;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header{
+
+    background:var(--primary);
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+header h1{
+
+    font-size:2.6rem;
+
+    margin-bottom:12px;
+
+}
+
+header p{
+
+    font-size:1.1rem;
+
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+nav{
+
+    background:#111827;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    justify-content:center;
+
+    list-style:none;
+
+    flex-wrap:wrap;
+
+}
+
+nav li{
+
+    margin:0;
+
+}
+
+nav a{
+
+    display:block;
+
+    padding:18px 28px;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+nav a:hover,
+
+nav a:focus{
+
+    background:var(--primary);
+
+    outline:none;
+
+}
+
+nav a[aria-current="page"]{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+
+main{
+
+    max-width:var(--max-width);
+
+    margin:auto;
+
+    padding:40px 20px;
+
+}
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+section{
+
+    margin-bottom:50px;
+
+}
+
+section h2{
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+
+    color:var(--primary-dark);
+
+}
+
+/* ==========================================
+   ARTICLES / CARDS
+========================================== */
+
+article{
+
+    background:var(--surface);
+
+    padding:25px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:25px;
+
+}
+
+article h3{
+
+    margin-bottom:15px;
+
+}
+
+article p{
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    border-radius:10px;
+
+    margin:20px auto;
+
+}
+
+/* ==========================================
+   LISTS
+========================================== */
+
+ul{
+
+    padding-left:25px;
+
+}
+
+li{
+
+    margin-bottom:8px;
+
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+form{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+form div{
+
+    margin-bottom:22px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+}
+
+input,
+
+textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    background:white;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+}
+
+small{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================
+   FIELDSET
+========================================== */
+
+fieldset{
+
+    border:1px solid var(--border);
+
+    padding:20px;
+
+    border-radius:8px;
+
+    margin-bottom:25px;
+
+}
+
+legend{
+
+    padding:0 8px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    padding:14px 30px;
+
+    cursor:pointer;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+a:focus,
+
+button:focus,
+
+input:focus,
+
+textarea:focus{
+
+    outline:3px solid #f59e0b;
+
+    outline-offset:3px;
+
+}
+
+/* ==========================================
+   ADDRESS
+========================================== */
+
+address{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    font-style:normal;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    margin-top:40px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    header{
+
+        padding:40px 20px;
+
+    }
+
+    header h1{
+
+        font-size:2rem;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+
+    }
+
+    nav a{
+
+        text-align:center;
+
+        border-bottom:1px solid rgba(255,255,255,.15);
+
+    }
+
+    main{
+
+        padding:25px 15px;
+
+    }
+
+    article{
+
+        padding:20px;
+
+    }
+
+    form{
+
+        padding:20px;
+
+    }
+
+}
+
+/* ==========================================
+   PRINT
+========================================== */
+
+@media print{
+
+    nav,
+
+    footer,
+
+    .skip-link{
+
+        display:none;
+
+    }
+
+    body{
+
+        background:white;
+
+    }
+
+}
